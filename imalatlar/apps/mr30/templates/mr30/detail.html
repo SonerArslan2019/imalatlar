@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load  static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/sld/detail.css' %}">
+
+{% endblock %}
+
+{% block body %}
+    {#    <div style="margin-top: -90px">#}
+
+    <div class="container fixed-top bg-white">
+        <div class="row navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="nav">
+                <a class="nav-link active" aria-current="page"
+                   href="{% url 'home:kapilar' %}">KAPI TIPLERI</a>
+                <a class="nav-link active" aria-current="page"
+                   href="{% url 'home:aboutmr30' %}">MR30</a>
+
+                <a class="nav-link active" style="color:black;"
+                   aria-current="page">MR30 {{ work_order.get_door_type_display }} DONER KAPI</a>
+                <a class="nav-link active" style="color:black;" aria-current="page">Detay{{ work_order.id }}</a>
+
+            </nav>
+        </div>
+
+
+        <div class="row navbar navbar-expand-lg navbar-light bg-white" style="height: 25px;">
+            <nav class="nav justify-content-end">
+                <a class="nav-link" aria-current="page" href="javascript:printDiv('divYazdir');">
+                    Yazdir</a>
+                <a class="nav-link" aria-current="page" target="_blank"
+                   href="{% url 'mr30:send_mail' id=work_order.id %}">Mail Gonder</a>
+
+            </nav>
+
+        </div>
+        <hr>
+    </div>
+
+
+
+
+
+
+    {##}
+    {#    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">#}
+    {#        <div class="container-fluid">#}
+    {#            <div class="row">#}
+    {#                <div class="col" style="display: inherit">#}
+    {#                    <div>#}
+    {#                        <a href="{% url 'home:kapilar' %}">KAPI TIPLERI</a> / <a#}
+    {#                            href="{% url 'home:aboutsld' %}">SLD</a> /#}
+    {#                        Detay / {{ work_order.id }}<br>#}
+    {#                    </div>#}
+    {#    <div class="col" style="text-align: right;">#}
+    {#        <a target="_blank" href="{% url 'sld:send_mail' id=work_order.id %}">#}
+    {#            <i class="fa fa-mail-forward">Mail Gönder</i>#}
+    {#        </a>#}
+    {##}
+    {#        <a class="text-dark" href="javascript:printDiv('divYazdir');">#}
+    {#            <img src="{% static 'img/yazdir.png' %}" width="30" height="30" alt="">#}
+    {#            <i>Yazdır</i>#}
+    {#        </a>#}
+    {##}
+    {#    </div>#}
+    {##}
+    {#    <div>#}
+    {#        <b style="color:black;">SLD {{ work_order.get_door_type_display }} KAYAR KAPI</b>#}
+    {#    </div>#}
+    {#                    <div>#}
+    {#                        Oluşturan {% firstof work_order.user.get_full_name  work_order.user.username %}#}
+    {#                        {{ work_order.created_time }}#}
+    {#                    </div>#}
+    {##}
+    {#                </div>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </nav>#}
+
+
+    {#        <div class="row">#}
+    {#            <div class="col-md-12" style="display: inherit">#}
+    {#                <div class="col-md-5">#}
+    {#                    <a href="{% url 'home:kapilar' %}">KAPI TIPLERI</a> / <a href="{% url 'home:aboutsld' %}">SLD</a> /#}
+    {#                    Detay / {{ work_order.id }}#}
+    {#                </div>#}
+    {#                <div class="col-md-2 offset-4">#}
+    {#                    <a target="_blank" href="{% url 'sld:send_mail' id=work_order.id %}">#}
+    {#                        <i class="fa fa-mail-forward">Mail Gönder</i>#}
+    {#                    </a>#}
+    {#                </div>#}
+    {#                <div class="col-md-1"><a class="text-dark" href="javascript:printDiv('divYazdir');">#}
+    {#                    <img src="{% static 'img/yazdir.png' %}" width="30" height="30" alt="">#}
+    {#                    <i>Yazdır</i>#}
+    {#                </a>#}
+    {#                </div>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#        <div class="row">#}
+    {#            <div class="col-md-8">#}
+    {#                <b style="color:black;">SLD {{ work_order.get_door_type_display }} KAYAR KAPI</b>#}
+    {#            </div>#}
+    {#            <div class="col-md-4" style="text-align: right;">#}
+    {#                Oluşturan {% firstof work_order.user.get_full_name  work_order.user.username %}#}
+    {#                <br>#}
+    {#                {{ work_order.created_time }}#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </div>#}
+    {% include 'sld/parts/'|add:work_order.door_type|add:'.html' %}
+{% endblock body %}
+
+{% block extra_script %}
+    {#    <script type="text/javascript">#}
+    {#        function printDiv(divName) {#}
+    {#            window.print();#}
+    {#        }#}
+    {##}
+    {#        $('.nav-tabs li').click(function () {#}
+    {#            $('.nav-tabs li').removeClass('active');#}
+    {#            $(this).addClass('active');#}
+    {#        });#}
+    {#    </script>#}
+{% endblock %}
+
+
+

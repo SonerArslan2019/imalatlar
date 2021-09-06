@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+    {% block body %}
+    {% include 'navbar.html' %}
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4>SLD KAPILAR / İşlem Türleri</h4>
+                <hr>
+            </div>
+        </div>
+        <div class="filters-content" style="text-align: center;">
+            <div class="row grid" style="text-align: center;">
+                <div class="single-portfolio col-sm-2 all raster">
+                    <div class="relative">
+                        <div class="thumb">
+                            <a href="{% url 'sld:create' %}">
+                                <div class="overlay overlay-bg"></div>
+                                <img class="image img-fluid" src="{% static 'img/sld.jpg' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="p-inner">
+                        <a href="{% url 'sld:create' %}"><h4 class="text-info" class="text-info"
+                                                             style="text-align: center;">İmalat Oluştur</h4></a>
+                    </div>
+                </div>
+                <div class="single-portfolio col-sm-2 all raster">
+                    <div class="relative">
+                        <div class="thumb">
+                            <a href="{% url 'sld:list' %}">
+                                <div class="overlay overlay-bg"></div>
+                                <img class="image img-fluid" src="{% static 'img/sld.jpg' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="p-inner">
+                        <a href="{% url 'sld:list' %}"><h4 class="text-info" class="text-info"
+                                                           style="text-align: center;">İmalat Geçmişi</h4></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+    {% include 'footer.html' %}
+    </div>
+
+
+    {% endblock body %}
+

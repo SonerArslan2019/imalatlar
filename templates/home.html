@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<title>{% block title %}GIRIS SAYFASI{% endblock %}</title>
+
+{% block body %}
+    <div class="container-fluid mt-3">
+        <div class="bg-success">
+            <img src="{% static 'img/metaxdoor-doner-kapı-revolving-door.jpg' %}" alt="imalat resmi"
+                 style="max-height: 7rem;"/>
+        </div>
+        <div class="card border-success mt-4 rounded mx-auto d-block" style="max-width: 19rem;">
+            <div class="card-header"><h5>imalat programi</h5></div>
+            <div class="card-body text-success">
+                <h6 class="card-title">HTM METAXDOOR GmbH</h6>
+                <p class="card-text">METAXDOOR imalat programi kullanmak icin asagidaki buton ile giris
+                    yapalim</p><br><br><br>
+                <a href="{% url 'user:login' %}" class="btn btn-outline-success mt-3">GIRIS YAPALIM</a>
+            </div>
+        </div>
+        <br><br><br>
+        {% include 'footer.html' %}
+    </div>
+{% endblock %}
+
+

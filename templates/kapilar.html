@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<title>{% block title %}KAPI TIPLERI{% endblock %}</title>
+
+{% block body %}
+    <div class="container-fluid mt-3">
+        <div class="bg-success">
+            <img src="{% static 'img/metaxdoor-doner-kapı-revolving-door.jpg' %}" alt="imalat resmi"
+                 style="max-height: 7rem;"/>
+        </div>
+        <div class="services-area section-gap">
+            <div class="container">
+                {% if request.user.is_authenticated %}
+                    <div class="row">
+                        <div class="col-md-12 mt-2">
+                            <p class="text-danger, bg-success">
+                            <h4>Kapı Tipleri</h4>
+                            <hr>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="row row-cols-2 row-cols-lg-6 g-2 g-lg-2">
+                            <div class="col">
+                                <div class="p-3 border bg-white" style="width: 13rem;">
+                                    <a href="{% url 'home:aboutsld' %}">
+                                        <img src="{% static 'img/sld.jpg' %}" class="card-img-top" style="height: 9rem;"
+                                             alt="Kayar kapi">
+                                    </a>
+                                    <div class="card-body">
+                                        <a href="{% url 'home:aboutsld' %}"><h4 class="text-success">
+                                            <strong>SLD</strong></h4>
+                                        </a>
+                                        <p class="card-text">Farkli Kayar kapi tiplerinin bulundugu imalat
+                                            girisidir.</p>
+                                        <a href="{% url 'home:aboutsld' %}" class="btn btn-outline-success">SLD giris
+                                            yap</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 border bg-white" style="width: 13rem;">
+                                    <a href="{% url 'home:aboutmr30' %}">
+                                        <img src="{% static 'img/mr30.jpg' %}" class="card-img-top"
+                                             style="height: 9rem;"
+                                             alt="Kayar kapi">
+                                    </a>
+                                    <div class="card-body">
+                                        <a href="{% url 'home:aboutmr30' %}"><h4 class="text-success">
+                                            <strong>MR30</strong></h4>
+                                        </a>
+                                        <p class="card-text">Farkli Doner kapi tiplerinin bulundugu imalat
+                                            girisidir.</p>
+                                        <a href="{% url 'home:aboutmr30' %}" class="btn btn-outline-success">MR30 giris
+                                            yap</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                {% endif %}
+            </div>
+            {% include 'footer.html' %}
+        </div>
+    </div>
+{% endblock %}

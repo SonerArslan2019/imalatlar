@@ -1,0 +1,42 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+    {% block extra_css %}
+    {% endblock %}
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+{#{% block body %}{% endblock %}#}
+
+<!-- Sonuclarin goruntulenmesi sirasinda ust kisimda bosluk olusturuyor. -->
+<div style="margin-top: 100px" class="container-fluid">
+    {% block body %}
+    {% endblock body %}
+
+</div>
+
+{#    {% block body %}#}
+{#    {% endblock body %}#}
+
+
+    <script src="{% static '/js/bootstrap.js' %}"></script>
+{#    <script src="{% static '/js/main.js' %}"></script>#}
+
+
+
+{% block extra_script %}
+{% endblock %}
+
+</body>

@@ -1,0 +1,14 @@
+<div class="container">
+    <hr>
+    {% if  request.user.is_authenticated %}
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://www.arslanyapi.com.tr/" target="_blank"><p>&copy; Arslan yapi
+                ---
+                2021</p></a></li>
+            <li class="list-inline-item"><strong><code>&lt;{{ request.user.get_username }}&gt;</code></strong></li>
+            <li class="list-inline-item"><a href="{% url 'user:logout' %}">CIKIS YAP</a></li>
+        </ul>
+    {% endif %}
+    <p class="fw-lighter">Bu imalat programi @Arslanyapi icin hazirlanmistir, izinsiz kullanilmasi yasaktir.</p>
+</div>
+
