@@ -1,0 +1,30 @@
+{% load static %}
+<div class="row">
+    <div style="text-align: center;" class="col-md-10">
+        <div class="table-responsive-md">
+            <table style="text-align: center;" class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>Hazırlayan</th>
+                    <th>Kontrol</th>
+                    <th>İmalat Şefi</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td style="text-align: left">{{ work_order.drawing }}</td>
+                    <td style="text-align: left">{{ work_order.control }}</td>
+                    <td style="text-align: left">{{ work_order.manufacturing_chief }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-2" style="text-align: center;">
+        <img class="card-img"  src="{% static 'img/metaxdoor_logo.png' %}" alt="">
+    </div>
+    <hr>
+</div>
+{#<div class="row">#}
+{##}
+{#</div>#}
