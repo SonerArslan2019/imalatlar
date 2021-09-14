@@ -137,25 +137,26 @@ $(document).ready(function () {
         {
             name:  'Konum Anahtari Sıva Üstü',
             short: 'konum_anahtari_sivaustu',
+            // image: "/static/img/sld/options/konum-anahtari_sivaustu.png",
         },
     ];
 
     const radar_activation_list = [
         {
             name: 'Mikrodalga Radar',
-            short: 'mikrodalga_radar'
+            short: 'mikrodalga_radar',
         },
         {
             name: 'Combine Safety - Activation',
-            short: 'combine_safety_activation'
+            short: 'combine_safety_activation',
         },
         {
             name: 'Yaklasım Sensoru ',
-            short: 'Yaklasım Sensoru'
+            short: 'yaklasim_sensoru',
         },
         {
             name: 'Emniyet Fotoseli',
-            short: 'emniyet_fotoseli'
+            short: 'emniyet_fotoseli',
         }
     ];
 
@@ -421,13 +422,13 @@ $(document).ready(function () {
         class: 'form-group'
     });
     radar_activations_div.after(radar_form_group);
-    $('<label/>', {class: 'col-form-label', text:'Radar Ve Aktivasyonlar'}).appendTo(radar_form_group);
+    $('<label/>', {class: 'col-form-label', text:'Radar ve Aktivasyonlar**'}).appendTo(radar_form_group);
 
     $(radar_activation_list).each(function (i, radar) {
         if (i % 2 == 0){
             radar_form_group.append($('<div/>', {class: 'specifications door-radars', id: `radar-${i / 2}`}));
         }
-        let radar_div= $('<div/>', {
+        const radar_div = $('<div/>', {
             class: 'specific',
         }).appendTo($(`#radar-${Math.floor(i / 2)}`));
 
