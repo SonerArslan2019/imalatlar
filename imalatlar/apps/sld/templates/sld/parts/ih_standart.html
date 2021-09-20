@@ -4,6 +4,7 @@
 
 {% with kanat_genisligi=work_order.pass_width|kanat_genisligi_hesaplama %}
     {% include 'sld/parts/tab_menu.html' %}
+
     <div class="tab-content" id="nav-tabContent">
         <div class="tab-pane fade show active p-3" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
             <div class="container">
@@ -196,6 +197,7 @@
                 {% include 'sld/parts/attendant.html' %}
             </div>
         </div>
+
         <div class="tab-pane fade show p-3" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
             <div class="container">
                 <div class="row">
