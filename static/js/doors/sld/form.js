@@ -137,7 +137,7 @@ $(document).ready(function () {
         {
             name:  'Konum Anahtari Sıva Üstü',
             short: 'konum_anahtari_sivaustu',
-            // image: "/static/img/sld/options/konum-anahtari_sivaustu.png",
+
         },
     ];
 
