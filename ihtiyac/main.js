@@ -1,0 +1,1 @@
+document.getElementById("div1").innerHTML = "<h1>Hosgeldiniz Kardes</h1>";
