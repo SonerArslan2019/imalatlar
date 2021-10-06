@@ -12,13 +12,22 @@
 <div id="div1"></div>
 
 
-
 <script>
+    var calisan = {
+        isim: "Soner",
+        soyisim: "Arslan",
+        maas: 5000,
+        departman: "IK",
 
-    function fonksiyonAdi(kapi) {
-        document.write("METAXDOOR" + kapi);
-    }
-    fonksiyonAdi(" Otomatik kapi");
+        tamAd: function () {
+            return this.isim + " " +
+                this.soyisim + " " + this.maas + " " +
+                this.departman;
+        }
+    };
+
+    var a = calisan.tamAd();
+    document.write(a);
 
 
 </script>
