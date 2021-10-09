@@ -36,7 +36,7 @@ $(document).ready(function () {
                 {
                     name:  "IKI SBT. + IKI HRK.",
                     short: "is_ih_standart",
-                    image: "/static/img/sld/is_ih_standart.png",
+                    image: "/static/img/sld/goruntu4.png",
                 },
             ]
         },
@@ -46,7 +46,7 @@ $(document).ready(function () {
                 {
                     name:  "TEK HAREKETLI",
                     short: "th_cam",
-                    image: "/static/img/sld/th_cam.png",
+                    image: "/static/img/sld/goruntu5.png",
                 },
                 {
                     name:  "TEK SBT. + TEK HRK.",
@@ -61,7 +61,7 @@ $(document).ready(function () {
                 {
                     name:  "IKI SBT. + IKI HRK.",
                     short: "is_ih_cam",
-                    image: "/static/img/sld/is_ih_cam.png",
+                    image: "/static/img/sld/goruntu3.png",
                 },
             ]
         },
@@ -86,7 +86,7 @@ $(document).ready(function () {
                 {
                     name:  "DORT HRK. + IKI SBT.",
                     short: "dh_is_teleskop",
-                    image: "/static/img/sld/is_dh_is_teleskop.png",
+                    image: "/static/img/sld/goruntu2.png",
                 },
             ]
         },
