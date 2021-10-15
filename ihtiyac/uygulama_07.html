@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UYGULAMA-7</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: aquamarine;
+        }
+
+        #div1 {
+            width: 35%;
+            height: 300px;
+            background-color: lightgray;
+            position: absolute;
+            border-radius: 30px;
+            left: 35%;
+            top: 25%;
+        }
+
+        #vize1 {
+            width: 150px;
+            height: 30px;
+            margin-left: 10px;
+            margin-top: 30px;
+        }
+
+        #vize2 {
+            width: 150px;
+            height: 30px;
+            margin-left: 70px;
+            margin-top: 30px;
+        }
+         #final {
+            width: 150px;
+            height: 30px;
+            margin-left: 70px;
+            margin-top: 30px;
+        }
+
+        #btn {
+            width: 150px;
+            height: 30px;
+            margin-left: 110px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="div1">
+    <label style="margin-left: 10px" for="kullaniciAdi">Vize 1     :</label>
+    <input id="vize1" type="text"/>
+    <br>
+    <label style="margin-left: 10px" for="parola">Vize 2 :</label>
+    <input id="vize2" type="password"/>
+    <br>
+     <label style="margin-left: 10px" for="parola">Final :</label>
+    <input id="final" type="password"/>
+    <br><br><br>
+    <button onclick="girisOnayi()" id="btn">Giris yap</button>
+</div>
+
+<img src="img/goruntu1.png" id="img" width="866" height="421"/>
+
+<script>
+    var text;
+
+    function resimSec() {
+        var a = [
+            "img/goruntu1.png",
+            "img/goruntu2.png",
+            "img/goruntu3.png",
+            "img/goruntu4.png",
+            "img/goruntu5.png",
+            "img/goruntu6.png",
+        ]
+        text = "";
+
+        var random = Math.round(Math.random() * 5);
+        text = a[random];
+
+    }
+
+    setInterval(function () {
+        resimSec();
+        document.getElementById("img").src = text;
+    }, 3000);
+
+    var kullanicilar = [
+        {kullaniciAdi: "admin", parola: "admin"},
+        {kullaniciAdi: "javascript", parola: "1234"},
+        {kullaniciAdi: "bidoluyazilim", parola: "4321"},
+    ];
+
+    var girilenKullaniciAdi;
+    var girilenParola;
+
+    var x;
+
+    function kontrolEt() {
+        girilenKullaniciAdi = document.getElementById("kullaniciAdi").value;
+        girilenParola = document.getElementById("parola").value;
+
+        for (x of kullanicilar) {
+            if ((x.kullaniciAdi === girilenKullaniciAdi) && (x.parola === girilenParola)) {
+                return true;
+            }
+        }
+    }
+
+    function girisOnayi() {
+        kontrolEt();
+
+        if (kontrolEt()) {
+            window.open("uygulama_05.html", "_self");
+        } else {
+            alert("Soner Arslan Geliyor.");
+            document.getElementById("kullaniciAdi").value = "";
+            document.getElementById("parola").value = "";
+        }
+    }
+
+
+</script>
+
+
+<script src="main.js"></script>
+</body>
+</html>
