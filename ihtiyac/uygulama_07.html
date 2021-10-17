@@ -11,7 +11,7 @@
 
         #div1 {
             width: 35%;
-            height: 300px;
+            height: 350px;
             background-color: lightgray;
             position: absolute;
             border-radius: 30px;
@@ -22,17 +22,18 @@
         #vize1 {
             width: 150px;
             height: 30px;
-            margin-left: 10px;
+            margin-left: 55px;
             margin-top: 30px;
         }
 
         #vize2 {
             width: 150px;
             height: 30px;
-            margin-left: 70px;
+            margin-left: 60px;
             margin-top: 30px;
         }
-         #final {
+
+        #final {
             width: 150px;
             height: 30px;
             margin-left: 70px;
@@ -45,21 +46,34 @@
             margin-left: 110px;
         }
 
+        #div2 {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            margin: auto;
+            display: none;
+            font-size: 30px;
+            text-align: center;
+            color: white;
+        }
+
     </style>
 </head>
 <body>
 
 <div id="div1">
-    <label style="margin-left: 10px" for="kullaniciAdi">Vize 1     :</label>
+    <label style="margin-left: 10px" for="kullaniciAdi">Vize 1 :</label>
     <input id="vize1" type="text"/>
     <br>
     <label style="margin-left: 10px" for="parola">Vize 2 :</label>
-    <input id="vize2" type="password"/>
+    <input id="vize2" type="text"/>
     <br>
-     <label style="margin-left: 10px" for="parola">Final :</label>
-    <input id="final" type="password"/>
+    <label style="margin-left: 10px" for="parola">Final :</label>
+    <input id="final" type="text"/>
+    <br><br>
+    <div id="div2"></div>
     <br><br><br>
-    <button onclick="girisOnayi()" id="btn">Giris yap</button>
+    <button onclick="yazdir()" id="btn">Hesapla</button>
 </div>
 
 <img src="img/goruntu1.png" id="img" width="866" height="421"/>
@@ -88,40 +102,47 @@
         document.getElementById("img").src = text;
     }, 3000);
 
-    var kullanicilar = [
-        {kullaniciAdi: "admin", parola: "admin"},
-        {kullaniciAdi: "javascript", parola: "1234"},
-        {kullaniciAdi: "bidoluyazilim", parola: "4321"},
-    ];
+    var vize1, vize2, final, ortalama;
 
-    var girilenKullaniciAdi;
-    var girilenParola;
+    function hesapla() {
+        vize1 = document.getElementById("vize1").value;
+        vize2 = document.getElementById("vize2").value;
+        final = document.getElementById("final").value;
 
-    var x;
+        ortalama = (vize1 * 0.3) + (vize2 * 0.3) + (final * 0.4);
 
-    function kontrolEt() {
-        girilenKullaniciAdi = document.getElementById("kullaniciAdi").value;
-        girilenParola = document.getElementById("parola").value;
-
-        for (x of kullanicilar) {
-            if ((x.kullaniciAdi === girilenKullaniciAdi) && (x.parola === girilenParola)) {
-                return true;
-            }
-        }
+        return ortalama;
     }
 
-    function girisOnayi() {
-        kontrolEt();
-
-        if (kontrolEt()) {
-            window.open("uygulama_05.html", "_self");
+    function harfNotu() {
+        var ort = hesapla();
+        if (ort > 90) {
+            return "AA";
+        } else if (ort > 80) {
+            return "BB";
+        } else if (ort > 70) {
+            return "CB";
+        } else if (ort > 60) {
+            return "CC";
+        } else if (ort > 50) {
+            return "DC";
+        } else if (ort > 40) {
+            return "DD";
         } else {
-            alert("Soner Arslan Geliyor.");
-            document.getElementById("kullaniciAdi").value = "";
-            document.getElementById("parola").value = "";
+            return "FF";
         }
     }
 
+    function yazdir() {
+        document.getElementById("div2").style.display = "block";
+        document.getElementById("div2").innerHTML = harfNotu();
+
+        if (harfNotu() === "FF") {
+            document.getElementById("div2").style.backgroundColor = "red";
+        } else {
+            document.getElementById("div2").style.backgroundColor = "green";
+        }
+    }
 
 </script>
 
