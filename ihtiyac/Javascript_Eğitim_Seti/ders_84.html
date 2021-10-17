@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JS Eğitim Seti || Ders 84 || Uygulama 11 </title>
+
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <style>
+
+        table{
+            border-collapse:collapse;
+            width:50%;
+        }
+        td,th{
+            border:1px solid #dddddd;
+            text-align:center;
+            padding:10px;
+        }
+        
+        tr:nth-child(even){
+            background-color:#dddddd;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+    <input id="ara" type="text" placeholder="Ara.." /><br /><br />
+
+
+    <table id="liste">
+
+        <thead>
+            <tr>
+                <th>İsim</th>
+                <th>Soyisim</th>
+                <th>Telefon</th>
+                <th>Mail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Doruk</td>
+                <td>Akgül</td>
+                <td>05555555555</td>
+                <td>dorukakgul@gmail.com</td>
+            </tr>
+            <tr>
+                <td>İrem</td>
+                <td>Şişman</td>
+                <td>01111111111</td>
+                <td>iremsisman@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Kılıç</td>
+                <td>Kalender</td>
+                <td>02222222222</td>
+                <td>kilickalender@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Yağmur</td>
+                <td>Aydeniz</td>
+                <td>04444444444</td>
+                <td>yagmuraydeniz@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Barış</td>
+                <td>Akgül</td>
+                <td>06666666666</td>
+                <td>barisakgul@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Batuhan</td>
+                <td>Küçükakdere</td>
+                <td>07777777777</td>
+                <td>batuhanakdere@gmail.com</td>
+            </tr>
+            <tr>
+                <td>İmran</td>
+                <td>Özcan</td>
+                <td>08888888888</td>
+                <td>imranözcan@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Onur</td>
+                <td>Kanbur</td>
+                <td>0999999999</td>
+                <td>kanburonur@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Melisa</td>
+                <td>Meral</td>
+                <td>0111111111</td>
+                <td>melisameral@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Yasin</td>
+                <td>Öztürk</td>
+                <td>0666666666</td>
+                <td>ozturkyasin@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Shoimardon</td>
+                <td>Azimov</td>
+                <td>07777777777</td>
+                <td>shoiazimov@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Dilge</td>
+                <td>Arslancan</td>
+                <td>01111111111</td>
+                <td>arslandilge@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Elif</td>
+                <td>Genç</td>
+                <td>02222222222</td>
+                <td>elifgenc@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Gizem</td>
+                <td>Keçeli</td>
+                <td>03333333333</td>
+                <td>keceligizem@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Bahadır</td>
+                <td>Güler</td>
+                <td>04444444444</td>
+                <td>bahadırguler@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Burak</td>
+                <td>Özgözgü</td>
+                <td>05555555555</td>
+                <td>burakozgozgu@gmail.com</td>
+            </tr>
+        </tbody>
+
+
+    </table>
+    
+
+
+
+    <script>
+
+
+        $(function () {
+
+            $("#ara").keyup(function () {
+
+                var deger = $(this).val().toLowerCase();
+
+                $("#liste tr").filter(function () {
+
+                    $(this).toggle($(this).text().toLowerCase().indexOf(deger) > -1
+
+
+                    );
+
+
+                });
+
+
+
+            });
+
+
+
+
+        });
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

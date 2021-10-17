@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JS Eğitim Seti || Ders 12 </title>
+
+
+</head>
+<body>
+
+    <div id="div1"></div>
+    <div id="div2"></div>
+
+    <script>
+
+        var a = ["Üzüm", "Elma", "Erik", "Seftali", "Kayısı"];
+        var b = [100, 15, 45, 6, 89, 42];
+        var c = [{ marka: "Mercedes", yıl: 2010 },
+                 { marka: "Honda", yıl: 2005 },
+                 { marka: "Renault", yıl: 2015 }];
+
+
+        function arabalariGoster() {
+
+            document.getElementById("div1").innerHTML =
+
+                c[0].marka + " " + c[0].yıl + "<br>" +
+                c[1].marka + " " + c[1].yıl + "<br>" +
+                c[2].marka + " " + c[2].yıl + "<br>";
+
+
+
+        }
+
+        function sırala() {
+
+            c.sort(function (a, b) { return b.yıl-a.yıl });
+
+            arabalariGoster();
+
+        }
+
+
+        arabalariGoster();
+        sırala();
+
+
+        //document.getElementById("div1").innerHTML = b + "<br><br>";
+
+        //b.sort(function (x, y) { return x - y });
+
+        
+
+
+        
+
+
+    </script>
+
+
+
+
+</body>
+</html>

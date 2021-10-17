@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JS Eğitim Seti || Ders 89 || AJAX </title>
+
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+
+    <style>
+
+        
+        
+       
+
+    </style>
+
+
+</head>
+<body>
+
+    <div id="div1"></div>
+
+    <button id="btn">Tıkla</button>
+
+    <script>
+
+        
+
+        $(function () {
+
+            $("#btn").click(function () {
+
+                //$("#div1").load("deneme.php", function (responseTxt, statusTxt,xhr) {
+
+                //    if (statusTxt == "success") {
+
+                //        alert("Başarılı");
+
+                //    }
+                //    else if (statusTxt == "error") {
+                //        alert("Hata : " + xhr.status + " Durum : " + xhr.statusText)
+                //    }
+
+                //});
+
+                $.post("deneme.php", {isim:"Ali", dil:"Almanca"} ,function (data, status) {
+
+                    $("#div1").html(data);
+
+                });
+
+
+
+
+                
+
+            });
+
+
+        });
+
+        
+
+
+    </script>
+
+
+
+
+</body>
+</html>

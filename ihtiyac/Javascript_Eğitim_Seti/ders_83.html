@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JS Eğitim Seti || Ders 83 || Uygulama 10 </title>
+
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <style>
+
+        #dis{
+            width:100%;
+            height:150px;
+
+        }
+        .c1{
+            width:15%;
+            height:150px;
+            margin-left:20px;
+            background-color:black;
+            color:white;
+            text-align:center;
+            line-height:150px;
+            float:left;
+            font-weight:bold;
+            font-size:32px;
+        }
+        #div1{
+            width:95%;
+            height:450px;
+            
+            background-color:gray;
+            color:white;
+            display:none;
+            position:relative;
+            top:10px;
+            left:10px;
+            
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <div id="dis">
+        <img id="img1" src="goruntu1.jpg" class="c1" />
+        <img id="img2" src="goruntu2.jpg" class="c1" />
+        <img id="img3" src="goruntu3.jpg" class="c1" />
+        <img id="img4" src="goruntu4.jpg" class="c1" />
+        <img id="img5" src="goruntu5.jpg" class="c1" />
+        <img id="img6" src="goruntu6.jpg" class="c1" />
+    </div>
+
+    <div id="div1"></div>
+
+
+    <script>
+
+
+        $(function () {
+
+
+            $("#img1").mouseover(function () {
+
+                $("#div1").fadeIn(2000).css("background-image", "url(goruntu1.jpg)");
+
+            });
+            $("#img1").mouseleave(function () {
+
+                $("#div1").css("display", "none");
+
+            });
+
+
+            $("#img2").mouseover(function () {
+
+                $("#div1").fadeIn(2000).css("background-image", "url(goruntu2.jpg)");
+
+            });
+            $("#img2").mouseleave(function () {
+
+                $("#div1").css("display", "none");
+
+            });
+
+            $("#img3").mouseover(function () {
+
+                $("#div1").fadeIn(2000).css("background-image", "url(goruntu3.jpg)");
+
+            });
+            $("#img3").mouseleave(function () {
+
+                $("#div1").css("display", "none");
+
+            });
+
+
+            $("#img4").mouseover(function () {
+
+                $("#div1").fadeIn(2000).css("background-image", "url(goruntu4.jpg)");
+
+            });
+            $("#img4").mouseleave(function () {
+
+                $("#div1").css("display", "none");
+
+            });
+
+
+            $("#img5").mouseover(function () {
+
+                $("#div1").fadeIn(2000).css("background-image", "url(goruntu5.jpg)");
+
+            });
+            $("#img5").mouseleave(function () {
+
+                $("#div1").css("display", "none");
+
+            });
+
+            $("#img6").mouseover(function () {
+
+                $("#div1").fadeIn(2000).css("background-image", "url(goruntu6.jpg)");
+
+            });
+            $("#img6").mouseleave(function () {
+
+                $("#div1").css("display", "none");
+
+            });
+
+
+
+        });
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>

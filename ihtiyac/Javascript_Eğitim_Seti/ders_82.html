@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JS Eğitim Seti || Ders 82 || Canvas </title>
+
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+
+
+    <style>
+
+        #c1{
+
+            
+            border:2px solid black;
+            background-color:yellow;
+
+        }
+        
+
+        
+    </style>
+
+
+
+
+</head>
+<body>
+
+    <img id="im" src="goruntu1.jpg" width="200" height="200" />
+    
+    <canvas id="c1" width="1500" height="900"></canvas>
+
+
+
+    <script>
+
+        window.onload = function () { 
+
+            var canvas = document.getElementById("c1");
+            var a = canvas.getContext("2d");
+
+                var img = document.getElementById("im");
+
+             a.drawImage(img,20,20);
+        
+};
+
+    </script>
+
+
+
+
+</body>
+</html>

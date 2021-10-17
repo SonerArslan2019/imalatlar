@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JS Eğitim Seti || Ders 81 || Canvas </title>
+
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+
+
+    <style>
+
+        #c1{
+
+            
+            border:2px solid black;
+            background-color:yellow;
+
+        }
+        
+
+        
+    </style>
+
+
+
+
+</head>
+<body>
+
+    <canvas id="c1" width="500" height="500"></canvas>
+    
+    
+    <script>
+
+
+        var canvas = document.getElementById("c1");
+        var a = canvas.getContext("2d");
+
+        a.font = "60px Times New Roman";
+        a.fillStyle = "blue";
+        a.strokeStyle = "red";
+
+        a.textAlign = "center";
+
+        a.shadowColor = "black";
+        a.shadowBlur = "5";
+        a.shadowOffsetX = "10";
+        a.shadowOffsetY = "10";
+
+        a.rotate(20 * Math.PI/180);
+
+
+        a.fillText("Javascript",canvas.width/2, canvas.height/2);
+
+        
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

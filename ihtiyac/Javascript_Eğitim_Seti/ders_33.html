@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JS Eğitim Seti || Ders 33 </title>
+    
+    
+    <style>
+
+        #div1{
+            width:50%;
+            height:auto;
+            background-color:yellow;
+            padding:10px;
+
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <div id="div1">
+
+        <p id="p1">Birinci Paragraf</p>
+        <p id="p2">İkinci Paragraf</p>
+        <p id="p3">Üçüncü Paragraf</p>
+        <p id="p4">Dördüncü Paragraf</p>
+
+    </div>
+    
+    
+
+    <script>
+
+        var a = document.getElementById("div1");
+
+        var p2 = document.getElementById("p2");
+        
+        var x = document.createElement("p");
+
+        var y = document.createTextNode("Beşinci Paragraf");
+
+        x.appendChild(y);
+
+        //a.replaceChild(y,p2);
+
+        //a.removeChild(document.getElementById("p4"));
+
+        //a.setAttribute("id", "div2");
+
+        var deneme = document.createAttribute("class");
+
+        deneme.value = "deneme";
+
+        a.setAttributeNode(deneme);
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

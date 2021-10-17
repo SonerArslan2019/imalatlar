@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JS Eğitim Seti || Ders 71 || JQuery </title>
+    
+
+    <script src="jquery-3.5.1.min.js"></script>
+
+
+    <style>
+          
+        .deneme{
+
+            width:100%;
+            height:500px;
+            background-color:green;
+            margin-bottom:15px;
+            font-size:32px;
+            position:relative;
+        }
+
+
+
+    </style>
+
+
+
+
+</head>
+<body>
+
+
+    <button id="btn">Start</button>
+    
+    <br /><br /><br />
+
+    <div id="div1" class="deneme"></div>
+
+    <script>
+
+
+
+
+        $(function () {
+
+            $("#btn").click(function () {
+
+                setInterval(function () {
+
+                $("#div1").hide(2000, function () {
+
+                    $(this).show(2000, function () {
+
+                        $(this).fadeOut(2000, function () {
+
+                            $(this).fadeIn(2000, function () {
+
+                                $(this).slideUp(2000, function () {
+
+                                    $(this).slideDown(2000);
+
+                                });
+
+                            });
+
+                        });
+
+
+                    });
+
+                });
+
+                },12000);
+
+
+            });
+            
+
+
+
+        });
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

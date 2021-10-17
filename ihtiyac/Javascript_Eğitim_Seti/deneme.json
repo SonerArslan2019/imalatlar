@@ -1,0 +1,29 @@
+{
+
+
+    "kisiler" :
+    [
+        {
+            "isim": "Onur",
+            "soyisim": "Kanbur"
+
+        },
+        {
+            "isim": "Melisa",
+            "soyisim": "Meral"
+        },
+        {
+            "isim": "Yasin",
+            "soyisim": "Ozturk"
+        },
+        {
+            "isim": "Berk",
+            "soyisim": "Deniz"
+        }
+
+
+    ]
+
+
+
+}

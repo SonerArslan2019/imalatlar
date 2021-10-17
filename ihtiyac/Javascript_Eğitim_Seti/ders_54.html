@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JS Eğitim Seti || Ders 54 || JQuery </title>
+    
+
+    <script src="jquery-3.5.1.min.js"></script>
+
+
+    <style>
+
+
+        #div1{
+            width:100%;
+            height:400px;
+            background-color:yellow;
+        }
+        #div2{
+            width:30%;
+            height:200px;
+            background-color:green;
+        }
+
+
+    </style>
+
+
+
+
+</head>
+<body>
+
+    <div id="div1">
+
+        <div id="div2">
+
+            
+
+        </div>
+
+    </div>
+    <br />
+    <input id="txt" type="text" />
+    <br /><br />
+    <button id="btn">Tıkla</button>
+    
+    <script>
+        
+        $(function () {
+
+            $("#txt").keyup(function () {
+
+                $("#div1").css("background-color", "red");
+
+            });
+            
+
+
+        });
+
+ 
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

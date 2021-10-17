@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JS Eğitim Seti || Ders 37 </title>
+    
+    
+    <style>
+
+        
+
+
+    </style>
+
+
+</head>
+<body>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <button onclick="pencereAc()" id="btn1">PencereAc</button>
+    <button onclick="pencereTasi()" id="btn2">PencereTaşı</button>
+
+    <script>
+
+        var yeniPencere;
+
+        function pencereAc() {
+
+            yeniPencere = window.open("", "_blank", "width=200, height=200");
+
+        }
+        function pencereTasi() {
+
+            yeniPencere.resizeTo(400, 400);
+
+            yeniPencere.focus();
+
+        }
+
+
+    </script>
+
+
+
+
+</body>
+</html>

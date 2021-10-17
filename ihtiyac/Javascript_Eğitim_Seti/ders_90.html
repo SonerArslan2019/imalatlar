@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JS Eğitim Seti || Ders 90 || JSON </title>
+
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+
+    <style>
+
+        
+        
+       
+
+    </style>
+
+
+</head>
+<body>
+
+    <div id="div1"></div>
+
+    <button id="btn">Tıkla</button>
+
+    <table id="liste">
+
+        <thead>
+
+            <tr>
+
+                <th>İsim</th>
+                <th>Soyisim</th>
+            </tr>
+
+
+        </thead>
+
+
+
+    </table>
+
+
+
+
+    <script>
+        
+        var kisiler = [{ isim: "ali", soyisim: "genc" },
+            { isim: "barıs", soyisim: "akgul" },
+            { isim: "doruk", soyisim: "kalender" },
+            { isim: "Mehmet", soyisim: "Simsek" }
+
+
+        ];
+
+        var jsonVeri = JSON.stringify(kisiler);
+        var veri = JSON.parse(jsonVeri);
+
+
+        $("#btn").click(function () {
+
+            for (i = 0; i < veri.length; i++) {
+
+                var satir = "<tr>";
+
+                satir += "<td>" + veri[i].isim + "</td>";
+                satir += "<td>" + veri[i].soyisim + "</td>";
+
+                satir += "</tr>";
+
+                $("#liste").append(satir);
+
+            }
+
+
+
+            
+
+        });
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

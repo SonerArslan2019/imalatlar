@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JS Eğitim Seti || Ders 51 || JQuery </title>
+    
+
+    <script src="jquery-3.5.1.min.js"></script>
+
+
+    <!--<script>
+
+        $(function () {
+
+
+            $("p").click(function () {
+
+                $(this).hide();
+
+            });
+
+
+
+
+        });
+
+
+    </script>-->
+
+
+
+
+
+</head>
+<body>
+
+    <p>JQuery öğreniyorum..</p>
+    <p>JQuery öğreniyorum..</p>
+    <p>JQuery öğreniyorum..</p>
+    <p>JQuery öğreniyorum..</p>
+
+
+
+    <script>
+
+        var a = document.querySelectorAll("p");
+
+        for (i = 0; i < 3; i++) {
+
+            a[i].onclick = function () {
+
+            a[i].style.display = "none";
+
+        }
+
+        }
+
+
+       
+       
+
+        
+    </script>
+
+
+
+
+</body>
+</html>

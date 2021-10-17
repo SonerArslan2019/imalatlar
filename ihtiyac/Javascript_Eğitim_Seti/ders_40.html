@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JS Eğitim Seti || Ders 40 </title>
+    
+    
+    <style>
+
+        #div1{
+
+            background-color:powderblue;
+            width:200px;
+            height:100px;
+
+        }
+       
+
+
+    </style>
+
+
+</head>
+<body>
+
+    
+    <div id="div1"></div>
+
+
+    <script>
+
+        var sonuc;
+
+        function degis() {
+
+
+            var x = ["blue", "red", "green", "yellow"];
+
+            var random = Math.round(Math.random() * 3);
+
+            sonuc = x[random];
+
+        }
+        function isim () {
+
+            degis();
+
+            document.getElementById("div1").innerHTML += "Javascript öğreniyorum..<br>";
+            document.getElementById("div1").style.backgroundColor = sonuc;
+
+        }
+
+
+
+
+        var a = setTimeout(isim, 5000);
+
+       
+
+
+    </script>
+
+
+
+
+</body>
+</html>

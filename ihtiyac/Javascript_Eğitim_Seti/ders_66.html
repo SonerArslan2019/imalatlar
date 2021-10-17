@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JS Eğitim Seti || Ders 66 || JQuery </title>
+    
+
+    <script src="jquery-3.5.1.min.js"></script>
+
+
+    <style>
+          
+        .deneme{
+
+            width:100%;
+            height:150px;
+            margin-bottom:15px;
+
+        }
+
+
+
+    </style>
+
+
+
+
+</head>
+<body>
+
+    <div id="div1" class="deneme" style="background-color:blue"></div>
+    <div id="div2" class="deneme" style="background-color:red"></div>
+    <div id="div3" class="deneme" style="background-color:green"></div>
+
+    <br />
+    <button id="btn1">Show</button>
+    <button id="btn2">Hide</button>
+    <button id="btn3">Toggle</button>
+    <script>
+
+
+
+
+        $(function () {
+
+            $("#btn2").click(function () {
+
+                $("#div1").hide(3000);
+                $("#div2").hide(6000);
+                $("#div3").hide(9000);
+            });
+            $("#btn1").click(function () {
+
+                $("#div1").show(3000);
+                $("#div2").show(6000);
+                $("#div3").show(9000);
+            });
+            $("#btn3").click(function () {
+
+                $("#div1").toggle("slow");
+                $("#div2").toggle(6000);
+                $("#div3").toggle(9000);
+            });
+
+        });
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

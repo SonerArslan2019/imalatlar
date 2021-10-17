@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JS Eğitim Seti || Ders 44 || Uygulama 4 </title>
+    
+    
+    <style>
+        
+
+        #div1{
+
+            width:40%;
+            height:auto;
+            position:relative;
+            left:450px;
+            top:150px;
+        }
+        #saat{
+            width:150px;
+            height:150px;
+            background-color:white;
+            float:left;
+            margin-left:4px;
+            font-size:128px;
+            text-align:center;
+        }
+        #dakika{
+            width:150px;
+            height:150px;
+            background-color:white;
+            float:left;
+            margin-left:4px;
+            font-size:128px;
+            text-align:center;
+        }
+        #saniye {
+            width: 150px;
+            height: 150px;
+            background-color: white;
+            float: left;
+            margin-left: 4px;
+            font-size:128px;
+            text-align:center;
+        }
+
+        body{
+            background-color:green;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <div id="div1">
+
+        <div id="saat">
+
+
+        </div>
+        <div id="dakika">
+
+        </div>
+        <div id="saniye">
+
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+
+        var date = new Date();
+
+        var saat, dakika, saniye;
+
+        saat = date.getHours();
+        dakika = date.getMinutes();
+        saniye = date.getSeconds();
+
+        setInterval(function () {
+
+            document.getElementById("saat").innerHTML = saat;
+            document.getElementById("dakika").innerHTML = dakika;
+            document.getElementById("saniye").innerHTML = saniye++;
+
+            
+
+            if (Number(document.getElementById("saniye").innerText) == 59) {
+
+                dakika++;
+                saniye = 0;
+
+            }
+            if (Number(document.getElementById("dakika").innerText) > 59) {
+
+                saat++;
+                dakika = 0;
+
+            }
+            if (Number(document.getElementById("saat").innerText) > 23) {
+
+                saat = 0;
+                dakika = 0;
+
+            }
+            
+
+        },1000);
+
+
+        
+
+    </script>
+
+
+
+
+</body>
+</html>

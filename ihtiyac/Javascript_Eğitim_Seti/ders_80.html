@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JS Eğitim Seti || Ders 80 || Canvas </title>
+
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+
+
+    <style>
+
+        #c1{
+
+            
+            border:2px solid black;
+            background-color:yellow;
+
+        }
+        
+
+        
+    </style>
+
+
+
+
+</head>
+<body>
+
+    <canvas id="c1" width="500" height="500"></canvas>
+    
+    
+    <script>
+
+
+        var canvas = document.getElementById("c1");
+        var a = canvas.getContext("2d");
+
+        var grd = a.createRadialGradient(75,50,10,90,60,190);
+        
+        grd.addColorStop(0, "black");
+        grd.addColorStop(0.5, "green");
+        grd.addColorStop(1, "white");
+
+        a.fillStyle = grd;
+
+        a.fillRect(20, 20, 250, 200);
+
+
+    </script>
+
+
+
+
+</body>
+</html>

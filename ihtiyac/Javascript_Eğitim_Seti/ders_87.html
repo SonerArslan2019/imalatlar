@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JS Eğitim Seti || Ders 87 || Uygulama 13 </title>
+
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+
+    <style>
+
+        #dis{
+            width:100%;
+            height:200px;
+            background-color:#333;
+        }
+        .c1{
+
+            width:150px;
+            height:150px;
+            background-color:white;
+            float:left;
+            margin-left:35px;
+            margin-top:25px;
+            border-radius:50%;
+            text-align:center;
+            font-size:128px;
+            font-weight:bold;
+            line-height:150px;
+        }
+       
+
+    </style>
+
+
+</head>
+<body>
+
+    <div id="dis">
+
+        <div id="div1" class="c1"></div>
+        <div id="div2" class="c1"></div>
+        <div id="div3" class="c1"></div>
+        <div id="div4" class="c1"></div>
+        <div id="div5" class="c1"></div>
+        <div id="div6" class="c1"></div>
+        <div id="div7" class="c1"></div>
+    </div>
+    <br /><br />
+    <button id="btn">Tıkla</button>
+
+    <script>
+
+
+        $("#btn").click(function () {
+
+            function sayiUret() {
+
+                return Math.round(Math.random() * 9);
+
+            }
+
+            $(".c1").hide().css({"background-color":"green","color":"white"});
+
+            $("#dis").css("background-color", "white");
+
+            $("#div1").html(sayiUret()).slideDown(1000);
+            $("#div2").html(sayiUret()).slideDown(2000);
+            $("#div3").html(sayiUret()).slideDown(3000);
+            $("#div4").html(sayiUret()).slideDown(4000);
+            $("#div5").html(sayiUret()).slideDown(5000);
+            $("#div6").html(sayiUret()).slideDown(6000);
+            $("#div7").html(sayiUret()).slideDown(7000);
+
+
+            setInterval(function () {
+
+                $(".c1").fadeOut(1000, function () {
+
+                    $(this).fadeIn(1000, function () {
+
+                        $(this).fadeOut(1000, function () {
+
+                            $(this).fadeIn(1000, function () {
+
+                                $(this).fadeOut(1000, function () {
+
+                                    $(this).fadeIn(2000);
+
+                                });
+
+                            });
+
+                        });
+
+                    });
+
+                });
+
+
+
+            }, 7000);
+
+
+
+
+        });
+
+        
+        
+        
+
+        
+
+
+    </script>
+
+
+
+
+</body>
+</html>
