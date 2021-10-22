@@ -407,7 +407,7 @@ $(document).ready(function () {
         let curr_value = $(this).val();
 
         if(this.checked){
-            if(input.val() == '')
+            if(input.val() === '')
                 input.val(curr_value);
             else
                 input.val(input.val() + ' ' + curr_value);
@@ -425,7 +425,7 @@ $(document).ready(function () {
     $('<label/>', {class: 'col-form-label', text:'Radar ve Aktivasyonlar**'}).appendTo(radar_form_group);
 
     $(radar_activation_list).each(function (i, radar) {
-        if (i % 2 == 0){
+        if (i % 2 === 0){
             radar_form_group.append($('<div/>', {class: 'specifications door-radars', id: `radar-${i / 2}`}));
         }
         const radar_div = $('<div/>', {
