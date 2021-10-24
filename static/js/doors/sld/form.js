@@ -312,7 +312,7 @@ $(document).ready(function () {
             $('select[name=door_type] option').removeAttr('selected');
             $('select[name=door_type] option[value='+ selected_door +']').prop('selected', 'selected');
 
-            if(selected_door == 'th_standart' || selected_door == 'ih_standart'){
+            if(selected_door === 'th_standart' || selected_door === 'ih_standart'){
 
                 total_width_div.hide();
                 total_height_div.show();
