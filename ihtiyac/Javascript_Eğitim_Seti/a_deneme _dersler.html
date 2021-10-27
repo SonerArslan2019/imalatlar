@@ -2,64 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ders 74</title>
+    <title>Ders 81</title>
     <script src="jquery-3.5.1.min.js"></script>
     <script src="jquery-ui.min.js"></script>
     <style>
-        .deneme {
-            width: 50%;
-            height: 400px;
+        #c1 {
+            border: 2px solid black;
             background-color: yellow;
-            padding: 10px;
-        }
-
-        #div2 {
-            width: 100px;
-            height: 100px;
-            background-color: green;
-            color: white;
-            text-align: center;
-        }
-
-        #p1 {
-            position: relative;
-            top: 80px;
-            height: 20px;
-            font-size: 32px;
         }
     </style>
 </head>
 <body>
-<div id="div1" class="deneme">
+<img id="im" src="goruntu1.jpg" width="200" height="200"/>
 
-    <div id="div2"> DRAG
-
-
-        <p id="p1"></p>
-
-
-    </div>
-
-</div>
+<canvas id="c1" width="1500" height="900"></canvas>
 <script>
-    $(function () {
-        $("#div2").draggable({
-            axis: "both",
-            containment: "#div1",
-            start: function () {
-                $("#p1").html("start");
-            },
-            stop : function () {
-                $("#p1").html("stop");
-                $("#div1").css("background-color", "yellow");
-            },
-            drag : function () {
-                $("#div1").css("background-color", "blue");
-            },
-            cursor: "move",
-            cursorAt: {top:-5, left:-5}
-        });
-    });
+    window.onload = function () {
+        var canvas = document.getElementById("c1");
+        var a = canvas.getContext("2d");
+
+        var img = document.getElementById("im");
+
+        a.drawImage(img, 20, 20);
+
+        var grd = a.createRadialGradient(75,50,10,90,60,190);
+
+        grd.addColorStop(0, "black");
+        grd.addColorStop(0.5, "green");
+        grd.addColorStop(1, "white");
+
+        a.fillStyle = grd;
+
+        a.fillRect(20, 20, 250, 200);
+
+        a.arc(250, 250, 100, 0, Math.PI*2, true);
+        a.fillStyle = "green";
+        a.lineWidth = "5";
+
+        a.fill();
+    }
+
+
 </script>
 
 </body>
