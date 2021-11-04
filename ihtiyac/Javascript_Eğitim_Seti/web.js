@@ -44,7 +44,7 @@
 
             say++;
 
-            if (say == 6) {
+            if (say === 6) {
 
                 say = 1;
             }
