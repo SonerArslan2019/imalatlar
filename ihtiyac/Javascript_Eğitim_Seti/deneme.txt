@@ -1,3 +1,0 @@
-<h1>Javascript AJAX</h1>
-
-<p id="p1">Javascript AJAX ogreniyorum</p>
