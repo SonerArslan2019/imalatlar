@@ -1,4 +1,4 @@
-.types .specifications {
+.types, .specifications {
     height: 100px;
     display: flex;
     position: relative;

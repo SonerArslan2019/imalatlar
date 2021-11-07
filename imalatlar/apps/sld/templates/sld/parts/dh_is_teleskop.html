@@ -56,7 +56,7 @@
                             <div class="d-flex align-items-center justify-content-center position-relative">
                                 <div class="text" style="left: 4%; top: 45%; transform: rotate(-90deg) " >{{ work_order.pass_height }}</div>
                                 <div class="text" style="left: 47%;bottom: 7%">{{ work_order.pass_width }}</div>
-                                <img src="{% static 'img/sld/goruntu4.png' %}">
+                                <img src="{% static 'img/sld/is_ih_standart.png' %}">
                             </div>
 
                         </div>
@@ -195,8 +195,8 @@
                             <table class="table table-bordered">
                                 <tbody>
                                 {% for option in work_order.get_display_options %}
-                                    {% if forloop.counter0|divisibleby:2 and not forloop.first %}</tr>{% endif %}
-                                    {% if forloop.counter0|divisibleby:2 %}<tr>{% endif %}
+                                    {% if forloop.counter0|divisibleby:2 and not forloop.first %}<tr>{% endif %}
+                                    {% if forloop.counter0|divisibleby:2 %}</tr>{% endif %}
                                     <td><i class="fa fa-dot-circle-o"></i> {{ option }}</td>
                                 {% empty %}
                                     <td><i class="fa fa-dot-circle-o"></i> Opsiyon Eklenmemiş</td>
@@ -207,8 +207,8 @@
                             <table class="table table-bordered">
                                 <tbody>
                                 {% for radar in work_order.get_display_radar_activations %}
-                                    {% if forloop.counter0|divisibleby:2 and not forloop.first %}</tr>{% endif %}
-                                    {% if forloop.counter0|divisibleby:2 %}<tr>{% endif %}
+                                    {% if forloop.counter0|divisibleby:2 and not forloop.first %}<tr>{% endif %}
+                                    {% if forloop.counter0|divisibleby:2 %}</tr>{% endif %}
                                     <td><i class="fa fa-dot-circle-o"></i> {{ radar }}</td>
                                 {% empty %}
                                     <td><i class="fa fa-dot-circle-o"></i> Radar veya Aktivasyon Seçeneği Eklenmemiş</td>

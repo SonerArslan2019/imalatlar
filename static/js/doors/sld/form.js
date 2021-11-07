@@ -16,27 +16,27 @@ $(document).ready(function () {
 
     const doors = [
         {
-            name: "Duz",
+            name: "Düz",
             types: [
                 {
-                    name:  "TEK HAREKETLI",
+                    name: "TEK HAREKETLİ",
                     short: "th_standart",
                     image: "/static/img/sld/th_standart.png",
                 },
                 {
-                    name:  "TEK SBT. + TEK HRK.",
+                    name: "TEK SBT. + TEK HRK.",
                     short: "ts_th_standart",
                     image: "/static/img/sld/ts_th_standart.png",
                 },
                 {
-                    name:  "IKI HAREKETLI",
+                    name: "İKİ HAREKETLİ",
                     short: "ih_standart",
                     image: "/static/img/sld/ih_standart.png",
                 },
                 {
-                    name:  "IKI SBT. + IKI HRK.",
+                    name: "İKİ SBT. + İKİ HRK.",
                     short: "is_ih_standart",
-                    image: "/static/img/sld/goruntu4.png",
+                    image: "/static/img/sld/is_ih_standart.png",
                 },
             ]
         },
@@ -44,24 +44,24 @@ $(document).ready(function () {
             name: "Cam",
             types: [
                 {
-                    name:  "TEK HAREKETLI",
+                    name: "TEK HAREKETLİ",
                     short: "th_cam",
-                    image: "/static/img/sld/goruntu5.png",
+                    image: "/static/img/sld/th_cam.png",
                 },
                 {
-                    name:  "TEK SBT. + TEK HRK.",
+                    name: "TEK SBT. + TEK HRK.",
                     short: "ts_th_cam",
                     image: "/static/img/sld/ts_th_cam.png",
                 },
                 {
-                    name:  "IKI HAREKETLI",
+                    name: "İKİ HAREKETLİ",
                     short: "ih_cam",
                     image: "/static/img/sld/ih_cam.png",
                 },
                 {
-                    name:  "IKI SBT. + IKI HRK.",
+                    name: "İKİ SBT. + İKİ HRK.",
                     short: "is_ih_cam",
-                    image: "/static/img/sld/goruntu3.png",
+                    image: "/static/img/sld/is_ih_cam.png",
                 },
             ]
         },
@@ -69,33 +69,33 @@ $(document).ready(function () {
             name: "Teleskopik",
             types: [
                 {
-                    name:  "IKI HAREKETLI",
+                    name: "İKİ HAREKETLİ",
                     short: "ih_teleskop",
                     image: "/static/img/sld/ih_teleskop.png",
                 },
                 {
-                    name:  "IKI HRK. + TEK SBT.",
-                    short: "ih_ts_teleskop",
+                    name: "İKİ HRK. + İKİ SBT.",
+                    short: "ih_is_teleskop",
                     image: "/static/img/sld/ts_ih_is_teleskop.png",
                 },
                 {
-                    name:  "DORT HAREKETLI",
+                    name: "DÖRT HAREKETLİ",
                     short: "dh_teleskop",
                     image: "/static/img/sld/dh_teleskop.png",
                 },
                 {
-                    name:  "DORT HRK. + IKI SBT.",
+                    name: "DÖRT HRK. + İKİ SBT.",
                     short: "dh_is_teleskop",
-                    image: "/static/img/sld/goruntu2.png",
+                    image: "/static/img/sld/is_dh_is_teleskop.png",
                 },
             ]
         },
     ];
 
     const glass_type_list = [
-        '4+4 Bombeli Seffaf Lamine',
-        '5+5 Bombeli Seffaf Lamine',
-        '6+6 Bombeli Seffaf Lamine',
+        '4+4 Bombeli Şeffaf Lamine',
+        '5+5 Bombeli Şeffaf Lamine',
+        '6+6 Bombeli Şeffaf Lamine',
         '4+4 Bombeli Opak Lamine',
         '5+5 Bombeli Opak Lamine',
         '6+6 Bombeli Opak Lamine',
@@ -103,60 +103,59 @@ $(document).ready(function () {
 
     const color_list = [
         'Ral Boy',
-        'Mat Eloksal',
+        'Mat Eloksa',
         'Renkli Mat Eloksal',
         '304 Kalite Mat',
         '304 Kalite Ayna',
-        '304 Kalite Satine',
+        '304 Kalite Satina',
         '316 Kalite Mat',
         '316 Kalite Ayna',
-        '316 Kalite Satine',
+        '316 Kalite Satina',
     ];
 
     const options_list = [
         {
-            name:  'El Terminali',
+            name: 'El Terminali',
             short: 'el_terminali',
         },
         {
-            name:  'Acil Stop',
+            name: 'Acil Stop',
             short: 'acil_stop',
         },
         {
-            name:  'Elektronik Kilit',
+            name: 'Elektronik Kilit',
             short: 'elektronik_kilit',
         },
         {
-            name:  'Batarya',
+            name: 'Batarya',
             short: 'batarya',
         },
         {
-            name: 'Konum Anahtari Standart',
+            name: 'Konum Anahtarı Standart',
             short: 'konum_anahtari_standart',
         },
         {
-            name:  'Konum Anahtari Sıva Üstü',
-            short: 'konum_anahtari_sivaustu',
-
+            name: 'Konum Anahtarı Sıva Üstü',
+            short: 'konum_anahtarı_sivaustu',
         },
     ];
 
     const radar_activation_list = [
         {
             name: 'Mikrodalga Radar',
-            short: 'mikrodalga_radar',
+            short: 'mikrodalga_radar'
         },
         {
             name: 'Combine Safety - Activation',
-            short: 'combine_safety_activation',
+            short: 'combine_safety_activation'
         },
         {
-            name: 'Yaklasım Sensoru ',
-            short: 'yaklasim_sensoru',
+            name: 'Yaklaşım Sensörü ',
+            short: 'yaklasim_sensoru'
         },
         {
             name: 'Emniyet Fotoseli',
-            short: 'emniyet_fotoseli',
+            short: 'emniyet_fotoseli'
         }
     ];
 
@@ -177,6 +176,7 @@ $(document).ready(function () {
     let color_selectbox = door_type_div.clone().attr('id', 'colors');
     color_selectbox.find('select').removeAttr('id');
     color_selectbox.find('select').attr('name', 'colors').removeAttr('required');
+    ;
     color_selectbox.find('label').text('Renkler').removeClass('requiredField');
 
     color_div.before(color_selectbox);
@@ -204,7 +204,7 @@ $(document).ready(function () {
     });
 
     $('#add-different-color input').change(function () {
-        if(color_div.is(':hidden')){
+        if (color_div.is(':hidden')) {
             color_div.show();
             color_selectbox.hide();
             color_div.find('input').val('');
@@ -248,7 +248,7 @@ $(document).ready(function () {
     });
 
     $('#add-different-glass input').change(function () {
-        if(glass_div.is(':hidden')){
+        if (glass_div.is(':hidden')) {
             glass_div.show();
             glasses_selectbox.hide();
             glass_div.find('input').val('');
@@ -287,7 +287,7 @@ $(document).ready(function () {
 
         let name = $(this).val();
         let door = doors.find(door => door.name === name);
-        let types_div = $('<div/>',{
+        let types_div = $('<div/>', {
             'class': 'types form-group'
         }).insertAfter(door_name);
 
@@ -307,12 +307,12 @@ $(document).ready(function () {
             }).appendTo(bg);
         });
 
-        $('input[name=type-of-door]').click(function(){
+        $('input[name=type-of-door]').click(function () {
             selected_door = $(this).val();
             $('select[name=door_type] option').removeAttr('selected');
-            $('select[name=door_type] option[value='+ selected_door +']').prop('selected', 'selected');
+            $('select[name=door_type] option[value=' + selected_door + ']').prop('selected', 'selected');
 
-            if(selected_door === 'th_standart' || selected_door === 'ih_standart'){
+            if (selected_door == 'th_standart' || selected_door == 'ih_standart') {
 
                 total_width_div.hide();
                 total_height_div.show();
@@ -329,8 +329,7 @@ $(document).ready(function () {
                     mechanism_width_div.find('input').val(parseInt($(this).val()));
                 });
 
-            }
-            else if (selected_door === 'ts_th_standart' || selected_door === 'is_ih_standart'){
+            } else if (selected_door == 'ts_th_standart' || selected_door == 'is_ih_standart') {
                 mechanism_width_div.hide();
                 total_height_div.show();
                 total_width_div.show();
@@ -349,10 +348,9 @@ $(document).ready(function () {
 
             } // else if
 
-            if(selected_door === 'ts_th_standart'  || selected_door === 'th_standart'){
+            if (selected_door == 'ts_th_standart' || selected_door == 'th_standart') {
                 opening_direction_div.show();
-            }
-            else{
+            } else {
                 opening_direction_div.hide();
                 opening_direction_div.find('option:selected').prop('selected', false).removeAttr('selected');
                 opening_direction_div.find('option:first').prop('selected', 'selected');
@@ -361,9 +359,9 @@ $(document).ready(function () {
         });
 
         $('input[name=pass_height]').change(function () {
-            if ((selected_door === 'ts_th_standart' ||
-                selected_door === 'is_ih_standart') &&
-                !ustluk_div.find('input').first().checked){
+            if ((selected_door == 'ts_th_standart' ||
+                    selected_door == 'is_ih_standart') &&
+                !ustluk_div.find('input').first().checked) {
                 // calculation of pass_heigth
             }
         });
@@ -375,13 +373,13 @@ $(document).ready(function () {
         class: 'form-group'
     });
     options_div.after(options_form_group);
-    $('<label/>', {class: 'col-form-label', text:'Opsiyonlar'}).appendTo(options_form_group);
+    $('<label/>', {class: 'col-form-label', text: 'Opsiyonlar'}).appendTo(options_form_group);
 
     $(options_list).each(function (i, option) {
-        if (i % 2 === 0){
+        if (i % 2 == 0) {
             options_form_group.append($('<div/>', {class: 'specifications door-options', id: `option-${i / 2}`}));
         }
-        let option_div= $('<div/>', {
+        let option_div = $('<div/>', {
             class: 'specific',
         }).appendTo($(`#option-${Math.floor(i / 2)}`));
 
@@ -394,7 +392,7 @@ $(document).ready(function () {
 
         option_label.append(`<p>${option.name}</p>`);
 
-        $('<input/>',{
+        $('<input/>', {
             value: option.short,
             type: 'checkbox'
         }).appendTo(option_label);
@@ -406,13 +404,12 @@ $(document).ready(function () {
         let input = options_div.find('input');
         let curr_value = $(this).val();
 
-        if(this.checked){
-            if(input.val() === '')
+        if (this.checked) {
+            if (input.val() == '')
                 input.val(curr_value);
             else
                 input.val(input.val() + ' ' + curr_value);
-        }
-        else {
+        } else {
             input.val(input.val().replace(curr_value, '').replace('  ', ' '));
         }
     });
@@ -422,13 +419,13 @@ $(document).ready(function () {
         class: 'form-group'
     });
     radar_activations_div.after(radar_form_group);
-    $('<label/>', {class: 'col-form-label', text:'Radar ve Aktivasyonlar**'}).appendTo(radar_form_group);
+    $('<label/>', {class: 'col-form-label', text: 'Radar Ve Aktivasyonlar'}).appendTo(radar_form_group);
 
     $(radar_activation_list).each(function (i, radar) {
-        if (i % 2 === 0){
+        if (i % 2 == 0) {
             radar_form_group.append($('<div/>', {class: 'specifications door-radars', id: `radar-${i / 2}`}));
         }
-        const radar_div = $('<div/>', {
+        let radar_div = $('<div/>', {
             class: 'specific',
         }).appendTo($(`#radar-${Math.floor(i / 2)}`));
 
@@ -441,7 +438,7 @@ $(document).ready(function () {
 
         radar_label.append(`<p>${radar.name}</p>`);
 
-        $('<input/>',{
+        $('<input/>', {
             name: 'door-image',
             value: radar.short,
             type: 'checkbox'
@@ -454,24 +451,23 @@ $(document).ready(function () {
         let curr_value = $(this).val()
         let input = radar_activations_div.find('input');
 
-        if(this.checked){
-            if(input.val() === '')
+        if (this.checked) {
+            if (input.val() == '')
                 input.val(curr_value);
             else
                 input.val(input.val() + ' ' + curr_value);
-        }
-        else {
+        } else {
             input.val(input.val().replace(curr_value, '').replace('  ', ' '));
         }
-        if(curr_value === 'mikrodalga_radar' || curr_value === 'yaklasim_sensoru'){
+        if (curr_value == 'mikrodalga_radar' || curr_value == 'yaklasim_sensoru') {
             let emniyet_fotoseli = $('.door-radars input[value=emniyet_fotoseli]');
             this.checked ? emniyet_fotoseli.prop('checked', true).change() : emniyet_fotoseli.prop('checked', false).change();
         }
-        if(curr_value === 'emniyet_fotoseli'){
+        if (curr_value == 'emniyet_fotoseli') {
             let combine_safety = $('.door-radars input[value=combine_safety_activation]');
             this.checked ? combine_safety.prop('disabled', true) : combine_safety.prop('disabled', false);
         }
-        if(curr_value === 'combine_safety_activation'){
+        if (curr_value == 'combine_safety_activation') {
             let emniyet_fotoseli = $('.door-radars input[value=emniyet_fotoseli]');
             this.checked ? emniyet_fotoseli.prop('disabled', true) : emniyet_fotoseli.prop('disabled', false);
         }
@@ -480,16 +476,16 @@ $(document).ready(function () {
 
     $('form').submit(function (e) {
         let submit_status = true;
-        if(glass_div.find('input').val() === ''){
+        if (glass_div.find('input').val() === '') {
             alert('Cam tipi boş bırakılamaz.');
-            submit_status=false;
+            submit_status = false;
         }
 
-        if(color_div.find('input').val() === '') {
+        if (color_div.find('input').val() === '') {
             alert('Renk boş bırakılamaz.');
             submit_status = false;
         }
-        if(!submit_status)
+        if (!submit_status)
             e.preventDefault();
 
     });
