@@ -1,6 +1,6 @@
 {% load static %}
 {% load extra_tags %}
-{% load th_cam %}
+{% load th_standart %}
 
 {% with kanat_genisligi=work_order.pass_width|add:84 %}
     {% include 'sld/parts/tab_menu.html' %}
@@ -61,14 +61,14 @@
                                      style="right: 10%; top: 43%; transform: rotate(90deg)">{{ work_order.pass_height }}</div>
                                 <div class="text" style="left: 57%; bottom: 13%">{{ work_order.pass_width }}</div>
                                 <div class="text" style="left: 57%; bottom: 2%">{{ work_order.pass_width|add:84 }}</div>
-                                <img src="{% static 'img/sld/th_cam_sol.png' %}">
+                                <img src="{% static 'img/sld/th_cam_sol.png' %}"/>
                             {% else %}
                                 <div class="text" style="left: 47%;top: 1%">{{ work_order.mechanism_width }}</div>
                                 <div class="text"
                                      style="left: 8%; top: 37%; transform: rotate(-90deg) ">{{ work_order.pass_height }}</div>
                                 <div class="text" style="left: 32%; bottom: 19%">{{ work_order.pass_width }}</div>
                                 <div class="text" style="left: 32%; bottom: 5%">{{ work_order.pass_width|add:84 }}</div>
-                                <img src="{% static 'img/sld/th_cam_sag.png' %}">
+                                <img src="{% static 'img/sld/th_cam_sag.png' %}"/>
                             {% endif %}
                         </div>
                     </div>
@@ -215,9 +215,8 @@
                         <div class="text-on-image">
                             <div class="text" style="right: 7%; top: 20%">{{ work_order.pass_width|add:30 }}</div>
                             <div class="text" style="left: 6%; top: 20%">{{ work_order.pass_width|add:30 }}</div>
-                            <div class="text" style="left: 30%; bottom: 25%">
-                                {{ work_order.mechanism_width|div_int:2 }}
-                            </div>
+                            <div class="text"
+                                 style="left: 30%; bottom: 25%">{{ work_order.mechanism_width|div_int:2 }}</div>
                             <img src="{% static 'img/sld/th_standart_mekanizma_imalati/mekanizma.png' %}">
                         </div>
                         <div class="text-on-image">

@@ -1,10 +1,11 @@
 {% load static %}
 {% load extra_tags %}
-{% load ts_th_cam %}
+{% load ts_th_standart %}
 
 {% with gecis_genisligi=work_order.pass_width|gecis_genisligi_hesaplama %}
     {% with kanat_genisligi=work_order.pass_width|kanat_genisligi_hesaplama %}
         {% include 'sld/parts/tab_menu.html' %}
+
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active p-3" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                 <div class="container">
@@ -60,13 +61,13 @@
                                     <div class="text"
                                          style="left: 14%; top: 50%; transform: rotate(-90deg) ">{{ work_order.pass_height }}</div>
                                     <div class="text" style="left: 63%; bottom: 14%">{{ kanat_genisligi|add:-84 }}</div>
-                                    <img src="{% static 'img/sld/ts_th_standart_sol.png' %}">
+                                    <img src="{% static 'img/sld/ts_th_cam_sol.png' %}">
                                 {% else %}
                                     <div class="text" style="left: 47%;top: 4%">{{ work_order.total_width }}</div>
                                     <div class="text"
                                          style="left: 7%; top: 50%; transform: rotate(-90deg) ">{{ work_order.pass_height }}</div>
                                     <div class="text" style="left: 30%; bottom: 12%">{{ kanat_genisligi|add:-84 }}</div>
-                                    <img src="{% static 'img/sld/ts_th_standart_sag.png' %}">
+                                    <img src="{% static 'img/sld/ts_th_cam_sag.png' %}">
                                 {% endif %}
                             </div>
                         </div>

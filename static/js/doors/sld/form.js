@@ -74,8 +74,8 @@ $(document).ready(function () {
                     image: "/static/img/sld/ih_teleskop.png",
                 },
                 {
-                    name: "İKİ HRK. + İKİ SBT.",
-                    short: "ih_is_teleskop",
+                    name: "IKI HRK. + TEK SBT.",
+                    short: "ih_ts_teleskop",
                     image: "/static/img/sld/ts_ih_is_teleskop.png",
                 },
                 {
@@ -176,7 +176,7 @@ $(document).ready(function () {
     let color_selectbox = door_type_div.clone().attr('id', 'colors');
     color_selectbox.find('select').removeAttr('id');
     color_selectbox.find('select').attr('name', 'colors').removeAttr('required');
-    ;
+
     color_selectbox.find('label').text('Renkler').removeClass('requiredField');
 
     color_div.before(color_selectbox);
@@ -348,19 +348,107 @@ $(document).ready(function () {
 
             } // else if
 
-            if (selected_door == 'ts_th_standart' || selected_door == 'th_standart') {
+            ///////////////////////////////////////////////////////////////////////////////////////////
+            if (selected_door == 'th_cam' || selected_door == 'ih_cam') {
+
+                total_width_div.hide();
+                total_height_div.show();
+                mechanism_width_div.show();
+                ustluk_div.hide();
+
+                total_width_div.find('input').val('');
+                total_height_div.find('input').val('');
+
+                pass_height_div.find('input').change(function () {
+                    total_height_div.find('input').val(parseInt($(this).val()) + 110);
+                });
+                pass_width_div.find('input').change(function () {
+                    mechanism_width_div.find('input').val(parseInt($(this).val()));
+                });
+
+            } else if (selected_door == 'ts_th_cam' || selected_door == 'is_ih_cam') {
+                mechanism_width_div.hide();
+                total_height_div.show();
+                total_width_div.show();
+                ustluk_div.show();
+
+                ustluk_div.find('input').checked = false;
+                mechanism_width_div.find('input').val('');
+
+                // toplam yükseklik ve genişliği hesaplama
+                pass_height_div.find('input').change(function () {
+                    total_height_div.find('input').val(parseInt($(this).val()) + 110);
+                });
+                pass_width_div.find('input').change(function () {
+                    total_width_div.find('input').val($(this).val());
+                });
+
+            } // else if
+
+            ///////////////////////////////////////////////////////////////////////////////////////////
+            if (selected_door == 'ih_teleskop' || selected_door == 'dh_teleskop') {
+
+                total_width_div.hide();
+                total_height_div.show();
+                mechanism_width_div.show();
+                ustluk_div.hide();
+
+                total_width_div.find('input').val('');
+                total_height_div.find('input').val('');
+
+                pass_height_div.find('input').change(function () {
+                    total_height_div.find('input').val(parseInt($(this).val()) + 110);
+                });
+                pass_width_div.find('input').change(function () {
+                    mechanism_width_div.find('input').val(parseInt($(this).val()));
+                });
+
+            } else if (selected_door == 'ih_ts_teleskop' || selected_door == 'dh_is_teleskop') {
+                mechanism_width_div.hide();
+                total_height_div.show();
+                total_width_div.show();
+                ustluk_div.show();
+
+                ustluk_div.find('input').checked = false;
+                mechanism_width_div.find('input').val('');
+
+                // toplam yükseklik ve genişliği hesaplama
+                pass_height_div.find('input').change(function () {
+                    total_height_div.find('input').val(parseInt($(this).val()) + 110);
+                });
+                pass_width_div.find('input').change(function () {
+                    total_width_div.find('input').val($(this).val());
+                });
+
+            } // else if
+
+            if (selected_door === 'ih_ts_teleskop' ||
+                selected_door === 'ih_teleskop' ||
+                selected_door === 'ts_th_cam' ||
+                selected_door === 'th_cam' ||
+                selected_door === 'ts_th_standart' ||
+                selected_door === 'th_standart') {
                 opening_direction_div.show();
             } else {
                 opening_direction_div.hide();
                 opening_direction_div.find('option:selected').prop('selected', false).removeAttr('selected');
                 opening_direction_div.find('option:first').prop('selected', 'selected');
-
             }
         });
-
+        ////////////////////////////////////////////////////////////////////////////////
         $('input[name=pass_height]').change(function () {
+            if ((selected_door == 'ts_th_cam' ||
+                    selected_door == 'is_ih_cam') &&
+                !ustluk_div.find('input').first().checked) {
+                // calculation of pass_heigth
+            }
             if ((selected_door == 'ts_th_standart' ||
                     selected_door == 'is_ih_standart') &&
+                !ustluk_div.find('input').first().checked) {
+                // calculation of pass_heigth
+            }
+            if ((selected_door == 'ih_ts_teleskop' ||
+                    selected_door == 'dh_is_teleskop') &&
                 !ustluk_div.find('input').first().checked) {
                 // calculation of pass_heigth
             }
