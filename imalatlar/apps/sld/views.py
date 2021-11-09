@@ -5,7 +5,7 @@ from django.contrib.messages import success, error
 from django.shortcuts import render, get_object_or_404, HttpResponse, redirect
 from django.template.loader import render_to_string
 
-# from ...utils.thread_mail import send_html_mail
+from ...utils.thread_mail import send_html_mail
 from imalatlar.settings import ALLOWED_HOSTS
 from .forms import SLDForm
 from .models import SLD
